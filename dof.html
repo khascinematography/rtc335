@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Depth of Field</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/main-style.css">
+</head>
+<!-- remove data-watermark for clean preview -->
+<body data-watermark>
+
+<!-- div for fit-to-screen. remove if not necessary -->
+<div id="fit-to-screen">
+
+  <!-- Page I -->
+  <section class="page">
+    <header>
+      <h1>Depth of Field</h1>
+    </header>
+    <div class="byline">KAĞAN KERIMOĞLU</div>
+    <p class="intro">This paper aims to provide a simple yet accurate explanation</p>
+
+    <img src="assets/media/dof-illustration.png" alt="Depth of Field" style="width:100%; height:auto; border-radius:10px; margin-top:4mm;">
+    <p class="caption"><em>Process occurs inside and behind the lens; the illustration is simplified for clarity</em></p>
+
+    <p>Depth of Field (DoF) is a <strong>concept</strong> in photography and cinematography that refers to the range of distance within an image that appears <strong>acceptably sharp</strong>.</p>
+    <p class="tight">This range extends between two points:</p>
+    <ul>
+      <li><strong>Near Limit of DoF</strong>, which is the closest distance from the camera at which objects still appear acceptably sharp.</li>
+      <li><strong>Far Limit of DoF</strong>, which is the farthest distance from the camera at which objects still appear acceptably sharp.</li>
+    </ul>
+
+    <p class="specific-margin-4">Accordingly, the depth of field can be expressed with the formula:</p>
+    <div class="formula">Depth of Field (DoF) = DoF Far Limit - DoF Near Limit</div>
+    <p>The near and far limits of depth of field are calculated using two key factors:<strong><br>Circle of Confusion (CoC)</strong> and <strong>Hyperfocal Distance</strong>.</p>
+    <p>Understanding what the CoC is will further clarify why, in the very first description of depth of field, the words <strong>“concept”</strong> and <strong>“acceptably sharp”</strong> were emphasized in bold.</p>
+
+    <h2>CIRCLE OF CONFUSION (CoC)</h2>
+    <!-- Flex container only for the first two paragraphs + image -->
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <!-- Left column: first two paragraphs -->
+      <div style="flex: 1;">
+        <p>The Circle of Confusion refers to the size of the blur spot created when a point of light does not come into perfect focus on the sensor or film.</p>
+        <p>When calculating depth of field, however, we use the Circle of Confusion Limit. This is the maximum diameter of that blur circle that the human eye can still perceive as acceptably sharp from a standard viewing distance.</p>
+      </div>
+      <!-- Right column: image -->
+      <div style="flex: 0 0 210px; margin-top: 5px;">
+        <img src="assets/media/coc-illustration.png" alt="CoC Lens Diagram" style="width:100%; height:auto; border-radius:0px;">
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>I</b> of <b>VI</b></span>
+    </footer>
+  </section>
+
+  <!-- Page II -->
+  <section class="page">
+    <p class="specific-margin-0">This definition of the CoC limit explains why depth of field is considered a concept rather than a strict scientific measurement. The threshold is based on what the human eye can perceive as “acceptably sharp” — a subjective experience, since perception of sharpness varies from person to person.</p>
+    <p>Still, this leads to an important question: <strong>What is meant by a standard viewing distance?</strong></p>
+    <p>The closest comfortable viewing distance for most people is about 25 cm, assuming normal visual acuity (20/20 vision). At this distance, the human eye can resolve about 5 line pairs per millimeter, giving a Circle of Confusion (CoC) of 0.2 mm in the final image. A comfortable viewing distance is also one at which the angle of view is about 60°. At 25 cm, this corresponds to roughly 30 cm, the diagonal of an 8×10 inch image.</p>
+    <p>When the original image is enlarged, the acceptable CoC must be reduced in proportion to the enlargement factor. For example, enlarging a 35 mm frame to 25 cm requires a factor of ~7, so the acceptable CoC in the original image becomes 0.029 mm. This is why depth of field tables often list CoC of 0.029 mm for a full-frame sensor, which is simplified with the formula:</p>
+    <div class="formula">CoC = <em>d</em> / 1500</div>
+    <p>where <em>d</em> is the sensor diagonal.</p>
+    <p>Since we have already explained the Circle of Confusion, there is one more key factor left to define: the Hyperfocal Distance.</p>
+
+    <h2>HYPERFOCAL DISTANCE</h2>
+    <!-- Flex container only for the first two paragraphs + image -->
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <!-- Left column: image -->
+      <div style="flex: 0 0 280px; margin-top: 12px;">
+        <img src="assets/media/hyperfocal-distance.jpg" alt="Hyperfocal Distance" style="width:100%; height:auto; border-radius:0px;">
+      </div>
+      <!-- Right column: first two paragraphs -->
+      <div style="flex: 1;">
+        <p>Hyperfocal Distance is the closest distance at which a lens can be focused while keeping objects at infinity acceptably sharp. When the lens is focused at the hyperfocal distance, everything from half that distance out to infinity will appear acceptably sharp.</p>
+      </div>
+    </div>
+
+    <!-- Remaining paragraphs continue full width -->
+    <p>This provides the maximum possible depth of field for a given focal length, aperture, and Circle of Confusion.</p>
+    <p>This is where the importance of the Circle of Confusion lies. In order to find Near Limit DoF and Far Limit DoF we need Hyperfocal Distance which is calculated using focal length, f-number and Circle of Confusion (CoC) as can be seen in the formula below:</p>
+    <div class="formula"><em>H</em> = <em>f</em><sup> 2</sup> / (<em>N</em> &middot; <em>c</em>) + <em>f</em></div>
+    <p>where <em>f</em> is the focal length, <em>N</em> is the f-number and <em>c</em> is the CoC.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>II</b> of <b>VI</b></span>
+    </footer>
+  </section>
+
+  <!-- Page III -->
+  <section class="page">
+    <h2 class="specific-margin-0">DEPTH OF FIELD NEAR AND FAR LIMIT</h2>
+    <p>As explained at the beginning of this paper, the near and far limits of depth of field are the closest and farthest distances from the camera at which objects still appear acceptably sharp.</p>
+    <p>The formulas for the near and far depth of field limits are given below:</p>
+    <div class="formula"><em>D</em><sub>near</sub> = (<em>H</em> &middot; <em>u</em>) / (<em>H</em> + (<em>u</em> - <em>f </em>))&nbsp;&nbsp;&nbsp;<strong>|</strong>&nbsp;&nbsp;&nbsp;<em>D</em><sub>far</sub> = (<em>H</em> &middot; <em>u</em>) / (<em>H</em> - (<em>u</em> - <em>f </em>))</div>
+    <p>where <em>H</em> is the Hyperfocal Distance, <em>u</em> is the focusing distance in mm and <em>f</em> is the focal length.</p>
+
+    <h2>INFLUENCERS OF DEPTH OF FIELD</h2>
+    <img src="assets/media/aperturesize-diagram.png" alt="DoF Fundamentals" style="width:100%; height:auto; margin-top:8px; margin-bottom: 3px;">
+    <p>Based on all this information, we can conclude that the only direct influencers of depth of field are the <strong>subject distance</strong> and the <strong>entrance pupil (effective aperture) diameter</strong>.</p>
+    <p>Factors such as f-number and focal length are indirect influencers, since the entrance pupil size is defined as the ratio of focal length to f-number. But what about sensor size? If the Circle of Confusion is defined relative to the image area, how can sensor size be only an indirect influencer?</p>
+    <p>While the CoC is relative to the image area, the differences in CoC limit values between two sensor sizes are extremely small (on the order of micrometers). Consequently, they have no meaningful impact on perceived sharpness and only a negligible effect on depth of field calculations.</p>
+    <p>This brings us to a final question you may already be asking: If sensor size has no significant direct effect on depth of field, then why does the appearance of background blur change with different sensor sizes?</p>
+    <p>That question leads us into the topic of <strong>format equivalency</strong>. But before we get there, we need to examine one last phenomenon: the <strong>Blur Circle</strong>.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>III</b> of <b>VI</b></span>
+    </footer>
+  </section>
+
+  <!-- Page IV -->
+  <section class="page">
+    <h2 class="specific-margin-0">BLUR CIRCLE</h2>
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <!-- Left column: image -->
+      <div style="flex: 0 0 270px; margin-top: 10px;">
+        <img src="assets/media/blurcircle-diagram.png" alt="Blur Circle Diagram" style="width:100%; height:auto; border-radius:0px;">
+      </div>
+      <!-- Right column: first two paragraphs -->
+      <div style="flex: 1;">
+        <p>Blur Circles are out-of-focus discs that form in an image when a point of light is not perfectly in focus. The term is often used interchangeably with the Circle of Confusion, but the two have slightly different meanings.</p>
+      </div>
+    </div>
+
+    <!-- Remaining paragraphs continue full width -->
+    <p>The CoC defines the theoretical acceptable limit of sharpness. It is used in depth of field calculations, and relative to the image area. Blur Circles, on the other hand, are the actual out-of-focus discs visible in an image. They are relative to the image subject rather than the image area.</p>
+    <p>To connect this to a more familiar concept, consider bokeh. Bokeh refers to the aesthetic quality of the out-of-focus areas in an image, particularly the way blur circles appear and interact with background elements. However, blur circles and bokeh are not the same: a blur circle is the physical characteristic of out-of-focus light, while bokeh describes the subjective visual impression and artistic appeal of that effect.</p>
+    <p>Now that we’ve covered the technical details, let’s turn to some practical examples.</p>
+
+    <h2>FORMAT EQUIVALENCY</h2>
+    <div style="display: flex; gap: 8px; margin-top: 12px;"> <img src="assets/media/fullframe-50mm.jpg" style="width:340px; height:auto;" alt="Full Frame 50mm"/> <img src="assets/media/mtf-25mm.jpg" style="width:340px; height:auto;" alt="MFT 25mm"/> </div>
+    <div style="display: flex; gap: 8px; margin-top: 8px; margin-bottom: 3px;"> <img src="assets/media/fullframe-105mm.jpg" style="width:340px; height:auto;" alt="Full Frame 105mm"/> <img src="assets/media/mtf-52mm.jpg" style="width:340px; height:auto;" alt="MFT 52mm"/> </div>
+    <p>The images on the left use a full-frame virtual camera as the reference, while those on the right use a Micro Four Thirds virtual camera. Formats are chosen for simplicity, since a Micro Four Thirds sensor has half the area of a full-frame sensor.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>IV</b> of <b>VI</b></span>
+    </footer>
+  </section>
+
+  <!-- Page V -->
+  <section class="page">
+    <p class="specific-margin-0">If we instead changed only the sensor size while keeping the focal length and f-number the same, we would still get the same blur, but the composition would differ. This scenario was not included, since it does not reflect how format equivalency is normally applied.</p>
+    <p>It is important to note that these are computer-generated images. In the physical world, real optics will always introduce small differences, since lenses of different focal lengths and apertures may have distinct characteristics. However, these differences are due to the lens design, not the sensor size.</p>
+    <p><strong>How can two different formats produce the same background blur?</strong></p>
+    <p class="specific-margin-0">The answer is simple: the blur circle size was matched. Let’s take a closer look at how this works in detail.</p>
+
+    <div style="display: flex; gap: 10px; margin-top: 8px;"> <img src="assets/media/blurcircles-unequalsize.png" width="340" height="auto" alt="Blue Circles Unequal Size"/> <img src="assets/media/blurcircles-equalsize.png" width="340" height="auto" alt="Blur Circles of Equal Size"/></div>
+    <p>Let’s assume that a hypothetical light ray passes through a 50 mm lens once at f/1.0 and once at f/2.0. Since the f-number is defined as the ratio of focal length to entrance pupil diameter, the entrance pupil diameter is simply the focal length divided by the f-number.</p>
+    <p>For a 50 mm lens set to f/1.0, the entrance pupil diameter is 50 mm, as shown in red in the illustration above left. At f/2.0, the entrance pupil diameter is 25 mm, exactly half the previous size, as shown in blue.</p>
+    <p>Now, let’s say we have a 100 mm lens at f/4 on a full-frame camera, and we want the same field of view and blur circle on a Micro Four Thirds camera, similar to our virtual scene. By keeping the subject distance the same, all we need is a 50 mm lens at f/2.0. This setup produces the same 25 mm entrance pupil diameter, as illustrated above right.</p>
+    <p>Here I use the terms “blur circle” and “background blur” intentionally, rather than depth of field, for the reasons discussed earlier in the section on the Circle of Confusion. If we were to calculate the depth of field, however, we would see that the result is practically the same, provided we compensate for blur circle size. I say “practically” because, as mentioned before, sensor size affects the CoC limit value but the differences are so small that they make no practical impact.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>V</b> of <b>VI</b></span>
+    </footer>
+  </section>
+
+  <!-- Page VI -->
+  <section class="page">
+    <p class="specific-margin-0">Before concluding, I would like to remind you that the other direct factor influencing depth of field, besides effective aperture, is subject distance. Subject distance affects depth of field because closer subjects produce steeper ray cones; for a given entrance pupil diameter, even slight defocus results in larger blur circles. This effect is illustrated in the graphic below.</p>
+    <div style="display: flex; gap: 10px; margin-top: 10px; margin-bottom: 12px"> <img src="assets/media/blurcircle-distancestandard.png" width="340" height="auto" alt="Blur Cirle Standard Distance"/> <img src="assets/media/blurcircle-distanceclose.png" width="340" height="auto" alt="Blur Circle Close Distance"/></div>
+    <p>In summary, depth of field is not a rigid measurement but a perceptual framework shaped by optics, viewing conditions, and human vision. Built on the foundations of the Circle of Confusion and Hyperfocal Distance, its seemingly complex relationships ultimately reduce to two direct influences: subject distance and effective aperture diameter. By clarifying these technical concepts in a straightforward way, cinematographers can use them deliberately—not just as formulas, but as creative tools to guide attention, isolate subjects, and shape the narrative impact of an image.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>VI</b> of <b>VI</b></span>
+    </footer>
+  </section>
+
+<!-- div closing for fit-to-screen. remove if not necessary -->
+</div> 
+<!-- script for fit-to-screen. remove if not necessary -->
+<script src="assets/fit-to-screen.js"></script>
+
+</body>
+</html>

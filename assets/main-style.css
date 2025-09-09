@@ -1,0 +1,206 @@
+:root {
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin: 13mm 14mm 10mm 14mm;
+  --text: #111;
+  --muted: #555;
+  --rule: #ddd;
+  --accent: #004D80;
+  --intro-red: #B22222;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #F7F7F7;
+  color: var(--text);
+  font-family: 'Inter', ui-sans-serif, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 16px; /* remove if necessary for auto sizing*/
+  line-height: 1.5;
+}
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  margin: 14mm auto;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  position: relative;
+  padding: var(--margin);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+h1 {
+  color: var(--accent);
+  font-variant:small-caps;
+  font-size: 31px;
+  line-height: 1.2;
+  margin: 0mm;
+  font-weight: 600;
+}
+.byline {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(102,102,102,1.00);
+}
+.intro {
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--intro-red);
+  margin: 2mm 0 4mm;
+  border-bottom: 1px solid #7E7E7E;
+  padding-bottom: 1mm;
+}
+h2 {
+  color: var(--accent);
+  font-size: 18px;
+  margin: 4mm 0 -2mm;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+.specific-margin-0 {
+  margin-top: 0mm;
+}
+.specific-margin-1 {
+  margin-top: 1mm;
+}
+.specific-margin-2 {
+  margin-top: 2mm;
+}
+.specific-margin-3 {
+  margin-top: 3mm;
+}
+.specific-margin-4 {
+  margin-top: 4mm;
+}
+.specific-margin-5 {
+  margin-top: 5mm;
+}
+.specific-margin-6 {
+  margin-top: 6mm;
+}
+.specific-margin-7 {
+  margin-top: 7mm;
+}
+.specific-margin-8 {
+  margin-top: 8mm;
+}
+p {
+  margin: 2mm 0;
+  text-align: justify;
+}
+p.tight {
+  margin-bottom: 1mm;  /* smaller than the global 2mm paragraph margin */
+}
+p.tight + ul {
+  margin-top: 0;       /* prevents extra stacking */
+  margin-bottom: 0;
+}
+.caption {
+  font-size: 15px;
+  color: var(--muted);
+}
+.note {
+  color: #555;
+  font-size: 15px;
+}
+.formula {
+  margin: 0mm;
+  padding: 2mm;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background: #fafbfc;
+}
+.formulas-headers {
+  color: #555;
+}
+.seq {
+  font-family: 'Inter', sans-serif;
+  background: #fafbfc;
+  border: 1px dashed var(--rule);
+  border-radius: 8px;
+  padding: 4mm;
+  margin: 0mm;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2mm 0;
+  font-size: 15px;
+}
+.specific-table-margin {
+  margin-top: 1mm;   /* margin for specific table */
+  margin-bottom: 4mm;
+}
+th, td {
+  border: 1px solid var(--rule);
+  padding: 6px 8px;
+  text-align: center;
+}
+/* table header */
+thead th {
+  background: #f7f8fa;
+  font-weight: 600;
+}
+/* --- Footer --- */
+footer.page-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 6mm;
+  border-top: none;
+}
+.folio { letter-spacing: .4px; }
+.folio b { color: #000; }
+
+/* --- Watermark --- */
+/* !!! change the <body> line before first section to <body data-watermark> to apply the watermark !!! */
+body[data-watermark]::before {
+  content: "RTC335";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(var(--fit-scale, 1)); /* "scale" necessary for fit-to-screen */
+  transform-origin: center center; /* line necessary for fit-to-screen */
+  font-size: 210px;
+  font-weight: 700;
+  color: #000;
+  opacity: 0.08;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 9999;
+}
+/* Print */
+@media print {
+  body { background: #fff; }
+  .page { box-shadow: none; margin: 0; page-break-after: always; }
+  .page:last-of-type { page-break-after: auto; }
+  #fit-to-screen .page { transform: none !important; } /* to disabled fit-to-screen for print */
+  body[data-watermark]::before {transform: translate(-50%, -50%) rotate(-45deg) scale(1); opacity: 0.5; } /* higher opacity watermark for print. "transform" necessary for fit-to-screen. */
+}
+
+/* Fit-to-screen rules. Remove if not necessary */
+#fit-to-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+#fit-to-screen .page {
+  transform-origin: top center;
+  transition: transform 120ms ease;
+}
+#fit-to-screen.is-scaled .page {
+  margin: 0;
+}

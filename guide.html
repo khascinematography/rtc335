@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exposure - Quick Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/main-style.css">
+  <style>
+    .formula.specific-padding {
+      padding: 3mm 12mm 3mm 12mm; /* specific padding for formula */
+    }
+    .seq.specific-margin-2 {
+      margin-bottom: 2mm;
+      text-align: center;
+    }
+    .seq.specific-margin-6 {
+      margin-bottom: 6mm;
+      text-align: center;
+    }
+  </style>
+</head>
+<!-- remove data-watermark for clean preview -->
+<body data-watermark>
+
+<!-- div for fit-to-screen. remove if not necessary -->
+<div id="fit-to-screen">
+
+  <!-- Page I -->
+  <section class="page">
+    <header>
+      <h1>Exposure Quick Guide</h1>
+    </header>
+    <div class="byline">KAĞAN KERİMOĞLU</div>
+    <p class="intro">This paper aims to provide a simple yet accurate set of key points</p>
+
+    <h2 class="specific-margin-4">EXPOSURE VARIABLES</h2>
+    <p> 
+      • the length (time) of exposure (<strong>shutter</strong>)<br>
+      • the lens opening (<strong>aperture</strong>)<br>
+      • the speed of the film (<strong>ISO</strong>)
+    </p>
+    <p class="note"><em><strong>indirect variable: </strong>frame rate <strong>(fps)</strong></em><br><em><strong>independent variable: </strong>scene luminance. It is common practice to measure illuminance <strong>(lux, fc)</strong>, even though sensors respond to luminance</em>.</p>
+
+    <h2 class="specific-margin-5">LIGHT AND EXPOSURE STOPS</h2>
+    <p class="tight"><strong>Doubling</strong> or halving the light <strong>increases</strong> or decreases the <strong>exposure by a stop</strong>:</p>
+    <ul>
+      <li>The change from ISO <strong>400</strong> to <strong>800</strong> is <strong>one stop</strong>, from 800 to 1600 another, and so on.</li>
+      <li>The change from <strong>1/50</strong> to <strong>1/100</strong> is <strong>one stop</strong>, from 1/100 to 1/200 another, and so on.</li>
+      <li>The change from <strong>45°</strong> to <strong>90°</strong> is <strong>one stop</strong>, from 90° to 180° another, and so on.</li>
+      <li><strong>Shutter speed</strong> and <strong>ISO</strong> scales typically use <strong>one-third stop</strong> increments.</li>
+    </ul>
+
+    <p>Following are the <strong>practical rounded</strong> one-third stop increments:</p>
+    <div class="seq specific-margin-6"><strong>ISO</strong>: 100, 125, 160, 200, 250, 320, 400, 500, 640, 800, 1000...<br>
+      <strong>Exposure Time</strong>: 1/50, 1/60, 1/80, 1/100, 1/125, 1/160, 1/200, 1/250, 1/320...<br></div>
+
+      <h2 class="specific-margin-2">F-NUMBER SEQUENCE</h2>
+      <p>Unlike <strong>shutter speed</strong> or <strong>ISO</strong>, which change in <strong>linear</strong> steps, <strong>f-numbers</strong> follow a <strong>logarithmic</strong> sequence: each value is <strong>√2 times</strong> the previous, because <strong>doubling the light</strong> requires <strong>doubling the aperture area</strong>, which is proportional to the square of its diameter.</p>
+      <div class="seq specific-margin-2"> f/1.0 = √(2)<sup>0</sup>, f/1.4 = √(2)<sup>1</sup>, f/2.0 = √(2)<sup>2</sup>, f/2.8 = √(2)<sup>3</sup>...</div>
+      <p>Following are the <strong>practical rounded</strong> one stop increment f-numbers:</p>
+      <div class="seq specific-margin-2">f/1.0, f/1.4, f/2.0, f/2.8, f/4.0, f/5.6, f/8, f/11, f/16, f/22</div>
+      <a href="https://khascinematography.github.io/rtc335/fstop.html" target="_blank" class="specific-margin-2"><strong>for detailed information on f-number</strong></a>
+
+      <footer class="page-footer">
+        <span class="folio">Page <b>I</b> of <b>II</b></span>
+      </footer>
+    </section>
+
+    <!-- Page II -->
+    <section class="page">
+      <h2 class="specific-margin-0">SHUTTER SPEED - SHUTTER ANGLE</h2>
+      <p>• In cinematography, <strong>shutter angle</strong> is used instead of shutter speed.<br>
+        • Most consumer-level hybrid cameras use <strong>shutter speed.</strong><br>
+        • A half shutter angle (180°) opening provides <strong>natural motion blur.</strong><br>
+      </p>
+      <p class="formulas-headers"><strong>Shutter Speed - Shutter Angle Conversion</strong></p>
+      <div class="formula specific-padding"> <strong>Shutter Angle to Shutter Speed</strong><br>
+        frame rate x (360 / shutter angle)<br>
+        e.g. (25 x (360 / 180)) = 50 (1/50)<br>
+        <br>
+        <strong> Shutter Speed to Shutter Angle</strong><br>
+        frame rate x shutter interval x 360<br>
+      e.g. (25 x (1/50) x 360) or (25 x (360/50)) = 180°</div>
+
+      <h2 class="specific-margin-8">FLICKER-FREE SHOOTING</h2>
+      <p>• For flicker-free shooting, it's important to consider the <strong>power frequency</strong> of the country.<br>
+        • The two main power frequencies are <strong>50Hz</strong> and <strong>60Hz</strong>.<br>
+      </p>
+      <p class="formulas-headers"><strong>Flicker-Free Shutter Angle Calculation</strong></p>
+      <div class="formula specific-padding"> <strong> frame rate x (360 / power frequency)</strong><br>
+      e.g. (25 x (360 / 50)) = 172.8°</div>
+
+      <h2 class="specific-margin-8">LIGHT METERING</h2>
+      <p>
+        • There are two types of metering: <strong>spot</strong> and <strong>incident</strong>.<br>
+        • Spot metering measures light reflected from the subject <strong>(reflectance)</strong>.<br>
+        • Incident metering measures light falling onto the subject <strong>(ambient illumination)</strong>.<br>
+        • Most digital cameras have built-in spot meters.<br>
+        • Spot meters assume a subject reflectance of <strong>18%</strong>.<br>
+        • Average caucasian skin reflects about <strong>36% (1 EV &gt; 18%)</strong>.<br>
+        • White paper peaks around <strong>90% (≈2.3 EV &gt; 18%)</strong>.<br>
+        • Spot measurement for reflectance values other than 18% should be <strong>compensated</strong>.<br>
+        • Simplest way to set ‘correct exposure’ is by using an 18% <strong>gray card</strong>.</p>
+
+        <p class="formulas-headers"><strong>Example Compensation</strong></p>
+        <div class="formula specific-padding">When measuring a 90% reflectance target, you must compensate the exposure by ≈2.3 stops; otherwise, scene white will be rendered as 18% gray.</div>
+
+        <footer class="page-footer">
+          <span class="folio">Page <b>II</b> of <b>II</b></span>
+        </footer>
+      </section>
+
+<!-- div closing for fit-to-screen. remove if not necessary -->
+</div> 
+<!-- script for fit-to-screen. remove if not necessary -->
+<script src="assets/fit-to-screen.js"></script>
+
+</body>
+</html>

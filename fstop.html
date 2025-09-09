@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>F‑number</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/main-style.css">
+  <style>
+    .no-smallcaps {
+      font-variant: normal;   /* disabled small caps */
+      font-size: 100%;        /* keep same size as parent */
+    }    
+  </style>
+</head>
+<!-- remove data-watermark for clean preview -->
+<body data-watermark>
+
+<!-- div for fit-to-screen. remove if not necessary -->
+<div id="fit-to-screen">
+
+  <!-- Page I -->
+  <section class="page">
+    <header>
+      <h1>F<span class="no-smallcaps">-</span>number</h1>
+    </header>
+    <div class="byline">KAĞAN KERIMOĞLU</div>
+    <p class="intro">This paper aims to provide a simple yet accurate explanation</p>
+
+    <img src="assets/media/aperture-illustration.png" alt="Aperture Illustration" style="width:100%; height:auto; border-radius:10px; margin-top:4mm; margin-bottom:6mm;">
+
+    <h2 class="specific-margin-1">APERTURE</h2>
+    <p class="aperture-text">The aperture is an adjustable diaphragm within a lens that controls how much light passes through. Although the diaphragm is formed by straight blades that create a polygonal opening, the entrance pupil—the virtual image of this opening viewed through the front elements—appears roughly circular. Changing the aperture diameter alters the entrance pupil’s area. Each one-stop change corresponds to a doubling or halving of the aperture’s area, thereby controlling the amount of light that reaches the sensor.</p>
+
+    <h2>F‑NUMBER</h2>
+    <p>The f-number, also known as focal ratio or f-stop, is defined as the ratio of a lens&rsquo;s focal length to the diameter of its entrance pupil (effective aperture). The formula is:</p>
+    <div class="formula"><em>N</em> = <em>f</em> / <em>D</em></div>
+    <p>where <em>f</em> is the focal length and <em>D</em> is the diameter of the entrance pupil.</p>
+    <p>Because this is a ratio, f-numbers are conventionally written with “f/” in front.<br>For example, a 50mm lens set to f/2.0 has an effective aperture diameter of 25mm.</p>
+    <p>As emphasized earlier in bold, exposure depends on the aperture’s area. Since the area of a circle scales with the square of its diameter, doubling the amount of light requires increasing the diameter by a factor of √2(≈ 1.414...), while halving the light requires dividing the diameter by the same factor.</p>
+    <p>This relationship gives rise to the geometric progression of f-numbers. Each full stop is &radic;2 times the previous one. The formula is:</p>
+    <div class="formula"><em>N</em> = &radic;2<sup>AV</sup></div>
+    <p>where AV is the aperture value.</p>
+    <p>The sequence produces exact integers (e.g., 1.0, 2.0, 4.0) and irrational numbers (e.g., 1.414…, 2.828…), with the latter rounded to the standard f-number markings found on lenses.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>I</b> of <b>IV</b></span>
+    </footer>
+  </section>
+
+  <!-- Page II -->
+  <section class="page">
+    <p class="specific-margin-0">The table below lists Aperture Value, the rounded practical f-numbers, and the calculated exact value to four decimal places Aperture Value should not be confused with Exposure Value (EV).</p>
+    <table aria-label="Full-stop table">
+      <thead>
+        <tr>
+          <th>AV</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><em>N</em></th><td>1.0</td><td>1.4</td><td>2.0</td><td>2.8</td><td>4.0</td><td>5.6</td><td>8.0</td><td>11.0</td><td>16.0</td>
+        </tr>
+        <tr>
+          <th>Calculated</th><td>1.0</td><td>1.414…</td><td>2.0</td><td>2.828…</td><td>4.0</td><td>5.657…</td><td>8.0</td><td>11.314…</td><td>16.0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>So far, we have only examined the geometric progression of f-numbers in full-stop increments. In practice, however, it is also common to use one-third-stop and half-stop values. The tables below list portions of the geometric sequence for these increments, similar to the previous table.</p>
+    <table aria-label="Half-stop table">
+      <thead>
+        <tr>
+          <th>AV</th><th>0</th><th>1/2</th><th>1</th><th>1<sup>1/2</sup></th><th>2</th><th>2<sup>1/2</sup></th><th>3</th><th>3<sup>1/2</sup></th><th>4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><em>N</em></th><td>1.0</td><td>1.2</td><td>1.4</td><td>1.7</td><td>2.0</td><td>2.4</td><td>2.8</td><td>3.3</td><td>4.0</td>
+        </tr>
+        <tr>
+          <th>Calculated</th><td>1.0</td><td>1.189…</td><td>1.414…</td><td>1.682…</td><td>2.0</td><td>2.378…</td><td>2.828…</td><td>3.364…</td><td>4.0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="specific-table-margin" aria-label="One-third-stop table">
+      <thead>
+        <tr>
+          <th>AV</th><th>0</th><th>1/3</th><th>2/3</th><th>1</th><th>1<sup>1/3</sup></th><th>1<sup>2/3</sup></th><th>2</th><th>2<sup>1/3</sup></th><th>2<sup>2/3</sup></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><em>N</em></th><td>1.0</td><td>1.1</td><td>1.2</td><td>1.4</td><td>1.6</td><td>1.8</td><td>2.0</td><td>2.2</td><td>2.5</td>
+        </tr>
+        <tr>
+          <th>Calculated</th><td>1.0</td><td>1.122…</td><td>1.260…</td><td>1.414…</td><td>1.578…</td><td>1.782…</td><td>2.0</td><td>2.245…</td><td>2.520…</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Full-stop increments are derived from this exact sequence:</strong></p>
+    <div class="seq">√(2)<sup>0</sup>, √(2)<sup>1</sup>, √(2)<sup>2</sup>, √(2)<sup>3</sup>, √(2)<sup>4</sup>, √(2)<sup>5</sup>, √(2)<sup>6</sup>, √(2)<sup>7</sup>, √(2)<sup>8</sup></div>
+    <p><strong>Half-stop increments are derived from this exact sequence:</strong></p>
+    <div class="seq">√(2)<sup>0/2</sup>, √(2)<sup>1/2</sup>, √(2)<sup>2/2</sup>, √(2)<sup>3/2</sup>, √(2)<sup>4/2</sup>, √(2)<sup>5/2</sup>, √(2)<sup>6/2</sup>, √(2)<sup>7/2</sup>, √(2)<sup>8/2</sup></div>
+    <p><strong>One-third-stop increments are derived from this exact sequence:</strong></p>
+    <div class="seq">√(2)<sup>0/3</sup>, √(2)<sup>1/3</sup>, √(2)<sup>2/3</sup>, √(2)<sup>3/3</sup>, √(2)<sup>4/3</sup>, √(2)<sup>5/3</sup>, √(2)<sup>6/3</sup>, √(2)<sup>7/3</sup>, √(2)<sup>8/3</sup></div>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>II</b> of <b>IV</b></span>
+    </footer>
+  </section>
+
+  <!-- Page III -->
+  <section class="page">
+    <h2 class="specific-margin-0">T‑STOP</h2>
+    <p>Still-photography lenses are rated in f-stops, which assume a perfect lens with 100% light transmittance. Cinema lenses, however, are rated in T-stops (transmission stops) to account for the light lost as it passes through the glass. A T-stop is essentially an f-number adjusted for the lens&rsquo;s light-transmission efficiency.</p>
+    <p>A lens with a T-stop of <em>N</em> delivers the same image brightness as an ideal lens with 100% transmittance and an f-number of <em>N</em>. In simpler terms, the T-stop represents the actual light reaching the sensor or film and corresponds to the ideal theoretical f-number, whereas f-stop does not, since no real photographic lens transmits 100% of the light.</p>
+    <p>A particular lens's T-stop is given by dividing the f-number by the square root of the transmittance of that lens:</p>
+    <div class="formula"><em>T</em> = <em>N</em> / &radic;transmittance</div>
+    <p>For example, an f/2.0 lens with transmittance of 75% has a T-stop of 2.3:</p>
+    <div class="formula"><em>T</em> = 2.0 / &radic;0.75 &asymp; 2.309...</div>
+
+    <h2 class="specific-margin-7">PRACTICAL CONVENTION</h2>
+    <!-- Flex container only for the first two paragraphs + image -->
+    <div style="display: flex; align-items: flex-start; gap: 25px;">
+      <!-- Left column: first two paragraphs -->
+      <div style="flex: 1;">
+        <p>In cinematography, f-number notation differs slightly from that of still photography. Cinema lenses typically feature markings in fractional-stop increments, as can be seen from the image of a very popular cinema lens with one-third stop increment markings.</p>
+        <p>These precisely spaced barrel engravings allows for both accurate exposure adjustments and smooth manual iris pulls that meet the demands of motion picture production.</p>
+      </div>
+      <!-- Right column: image -->
+      <div style="flex: 0 0 205px; margin-top: 12.5px;">
+        <img src="assets/media/tstop-marking.png" alt="T-Stop Lens Marking" style="width:100%; height:auto; border-radius:0px;">
+      </div>
+    </div>
+
+    <!-- Remaining paragraphs continue full width -->
+    <p>By contrast, still-photo lenses were traditionally marked only at full stops (f/2.8, f/4, etc.), and many designs even skipped some values altogether, particularly in compact lenses. Intermediate values could still be set manually by rotating the aperture ring to a position between markings, but they were not engraved on the lens. This approach reflected both the need for compact lens designs and the fact that photographers generally did not require such fine increments to be marked.</p>
+    <p>With the advent of digital still cameras, aperture control became electronically driven by the camera body. This allowed fractional-stop adjustments to be set with precision and displayed in the viewfinder or LCD (e.g., f/3.2, f/3.5). As a result, still-photo lenses did not need engraved fractional markings, since the electronic display provided that information.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>III</b> of <b>IV</b></span>
+    </footer>
+  </section>
+
+  <!-- Page IV -->
+  <section class="page">
+    <p class="specific-margin-0">This difference in notation has led cinematographers to call out fractional stops as full-stop plus EV (e.g., T2.8 plus ¹⁄₃), whereas photographers typically refer only the <em>N</em> value itself (e.g., f/3.2, which corresponds to f/2.8 plus ¹⁄₃).</p>
+    <p>Since the emergence of hybrid stills-and-video cameras, however, many photo-lens manufacturers have begun marking their lenses in fractional-stop increments to better support video production.</p>
+
+    <div style="display: flex; gap: 10px; margin-top: 12px; margin-bottom: 4px;">
+      <img src="assets/media/arri-layout.jpg" style="width:340px; height:auto;" alt="ARRI Layout"/>
+      <img src="assets/media/fx2-layout.jpg" style="width:340px; height:auto;" alt="Hybrid Camera Layout"/>
+    </div>
+
+    <p>From the images above, the one on the left shows a typical layout of an ARRI digital cinema camera, where iris information is displayed in full-stop plus 1/10-stop increments. The image on the right shows the layout of a hybrid stills/video camera, which instead displays the actual f-number directly, rather than a full-stop value plus fractional notation.</p>
+
+    <footer class="page-footer">
+      <span class="folio">Page <b>IV</b> of <b>IV</b></span>
+    </footer>
+  </section>
+
+<!-- div closing for fit-to-screen. remove if not necessary -->
+</div> 
+<!-- script for fit-to-screen. remove if not necessary -->
+<script src="assets/fit-to-screen.js"></script>
+
+</body>
+</html>
